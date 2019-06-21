@@ -1,0 +1,8 @@
+female	groupa	80	70	60
+female	groupa	60	50	100
+male	groupa	80	70	60
+male	groupa	80	70	60
+female	groupb	80	70	60
+female	groupb	80	70	60
+male	groupb	80	70	60
+male	groupb	80	70	60
