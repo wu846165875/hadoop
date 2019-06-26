@@ -1,4 +1,4 @@
-package com.lww.hadoop.db;
+package com.lww.hadoop.inputformat.db;
 
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -13,6 +13,10 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import com.lww.hadoop.mr.grade.GradeMapper;
 
 
+/**
+ * 使用 DBInputFormat 读取mysql数据
+ *
+ */
 public class UserApp {
 	public static void main(String[] args) {
 		try {

@@ -102,4 +102,22 @@ public class TestSeqFile {
 		writer.append(key,val);
 		writer.close();
 	}
+	
+	@Test
+	public void wirteSeqFile()  throws Exception {
+		Configuration conf = new Configuration();
+		FileSystem fs = FileSystem.get(conf);
+		Path path = new Path("d://gitdata//sampler/seq.seq");
+		IntWritable key = new IntWritable();
+		Text value = new Text();
+		CompressionCodec codec = ReflectionUtils.newInstance(BZip2Codec.class, conf);
+		Writer write = SequenceFile.createWriter(fs, conf, path, key.getClass(), value.getClass(), CompressionType.NONE, codec);
+		for(int i = 1;i<=100;i++) {
+			key.set(i);
+			value.set("test"+i);
+			write.append(key, value);
+		}
+		write.close();
+	}
+	
 }

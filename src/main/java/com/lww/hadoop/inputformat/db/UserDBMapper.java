@@ -1,4 +1,4 @@
-package com.lww.hadoop.db;
+package com.lww.hadoop.inputformat.db;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package com.lww.hadoop.db;
+package com.lww.hadoop.inputformat.db;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -39,7 +39,9 @@ public class User implements DBWritable{
 	}
 
 	public void write(PreparedStatement statement) throws SQLException {
-		
+		statement.setDouble(1, this.id);
+		statement.setString(2, this.name);
+		statement.setDouble(3, this.age);
 	}
 
 	public void readFields(ResultSet resultSet) throws SQLException {

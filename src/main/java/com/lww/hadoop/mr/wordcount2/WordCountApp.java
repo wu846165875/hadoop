@@ -33,6 +33,7 @@ public class WordCountApp {
 		job.setCombinerClass(WordCountReducer.class);
 		
 		job.setPartitionerClass(MyPartition.class);
+		//设置输入格式，读取整个文件
 		job.setInputFormatClass(WholeFileInputFormat.class);
 		job.setNumReduceTasks(0);
 		System.exit(job.waitForCompletion(true)?1:0);
