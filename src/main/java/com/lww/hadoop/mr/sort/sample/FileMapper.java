@@ -12,7 +12,6 @@ public class FileMapper extends Mapper<IntWritable, Text, IntWritable, Text>{
 	protected void map(IntWritable key, Text value, Mapper<IntWritable, Text, IntWritable, Text>.Context context)
 			throws IOException, InterruptedException {
 		context.write(key, value);
-		context.getCounter("m", "map").increment(1);
 	}
 
 }
